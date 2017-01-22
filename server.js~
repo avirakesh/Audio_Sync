@@ -1,0 +1,6 @@
+var app = require ("express")();
+var http = require("http").Server(app);
+
+http.listen(8888, function () {
+    console.log ("Server running on port 8888");
+});
