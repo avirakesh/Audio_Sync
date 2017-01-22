@@ -41,11 +41,11 @@ $(function () {
     });
 
     socket.on("current", function (msg) {
-        $('.timer-span').html(msg);
         var diff = audio.currentTime - msg;
-        if (diff < 0 || diff > 1) {
+        if (diff < 0 || diff > 2) {
             audio.currentTime = msg;
         }
+        $('.timer-span').html(msg);
     });
 
     socket.on("reset", function (msg) {
